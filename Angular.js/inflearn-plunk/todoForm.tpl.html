@@ -1,0 +1,15 @@
+<form name="todoForm" ng-submit="add(newTodoTitle)">
+  <div class="input-group">
+    <input type="text" name="newTodoTitle" class="form-control" ng-model="newTodoTitle" placeholder="insert new todo" minlength="3">
+    <span class="input-group-btn">
+      <button class="btn btn-success" type="submit" ng-disabled="todoForm.$invalid || !todoForm.newTodoTitle.$viewValue">Add</button>
+    </span>
+  </div>
+  
+  <div ng-show="todoForm.$dirty && todoForm.$invalid">
+    <div class="alert alert-warning" role="alert">Please insert more than 3 characters.</div>
+  </div>
+  
+</form>
+
+{{ todoForm.newTodoTitle.$viewValue }}
