@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="PhoneListController">
+    
+	<h1> Phone List </h1>
+	
+    <ul>
+      <li ng-repeat="phone in phones">
+        <span>{{ phone.name }}</span>
+        <p>{{ phone.snippet }}</p>
+      </li>
+    </ul>
+
+    <p>Hello, {{name}}!</p>
+
+    <table>
+      <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+        <td ng-repeat="j in [0, 1, 2, 3, 4, 5, 6, 7]">{{(i+1)*10 + (j+1)}}&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
